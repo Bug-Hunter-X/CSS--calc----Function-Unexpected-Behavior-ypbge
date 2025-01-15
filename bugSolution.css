@@ -1,0 +1,11 @@
+To solve this issue, explicitly define the width of the parent element. For example:
+```css
+.parent {
+  width: 300px;
+}
+
+div {
+  width: calc(100% - 10px);
+}
+```
+This will ensure that the `calc()` function has a reference point for calculating the width of the child element.  If you are working within a responsive design, use viewport units (vw, vh) as a more reliable approach for calculating element width in relation to the viewport dimensions instead of percentages directly within `calc()`.
